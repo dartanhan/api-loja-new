@@ -13,17 +13,18 @@
             </li>
             <li>
                 <a data-toggle="collapse" href="#laravel-examples" aria-expanded="true">
-                    <i class="fab fa-laravel" ></i>
-                    <span class="nav-link-text" >{{ __('Laravel Examples') }}</span>
+                    <i class="tim-icons icon-notes"></i>
+
+                    <span class="nav-link-text" >{{ __('Relatórios') }}</span>
                     <b class="caret mt-1"></b>
                 </a>
 
                 <div class="collapse show" id="laravel-examples">
                     <ul class="nav pl-4">
-                        <li @if ($pageSlug == 'profile') class="active " @endif>
-                            <a href="{{ route('profile.edit')  }}">
-                                <i class="tim-icons icon-single-02"></i>
-                                <p>{{ __('User Profile') }}</p>
+                        <li @if ($pageSlug == 'bestseller') class="active " @endif>
+                            <a href="{{ route('bestseller.index')  }}">
+                                <i class="tim-icons icon-align-center"></i>
+                                <p>{{ __('Mais Vendidos') }}</p>
                             </a>
                         </li>
                         <li @if ($pageSlug == 'users') class="active " @endif>
