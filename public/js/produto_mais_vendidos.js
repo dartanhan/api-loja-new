@@ -17,13 +17,13 @@ $(document).ready(function() {
         columns: [
             { "data": "id" , "defaultContent": ""},
             { "data": "descricao" , "defaultContent": ""},
-            { "data": "codigo_produto" , "defaultContent": ""},
             { "data": "quantidade" , "defaultContent": ""},
+            { "data": "codigo_produto" , "defaultContent": ""},
             { "data": "data", "defaultContent": "" }
         ],
         "columnDefs": [
             {
-                "targets": [ 1 ],
+                "targets": [  ],
                 "visible": false,
                 "searchable":true
             }

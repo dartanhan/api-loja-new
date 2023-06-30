@@ -12,10 +12,10 @@
                         <table class="table compact table-striped table-bordered table-hover" id="datatable" style="width:100%">
                             <thead class="text-center">
                                 <tr>
+                                    <th data-sortable="true">#</th>
                                     <th data-sortable="true">Descrição</th>
                                     <th data-sortable="true">Qtd</th>
-                                    <th data-sortable="true">Produto</th>
-                                    <th data-sortable="true">Tot.Produto</th>
+                                    <th data-sortable="true">Código</th>
                                     <th data-sortable="false">Data</th>
                                 </tr>
                             </thead>

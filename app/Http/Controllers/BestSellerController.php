@@ -50,8 +50,8 @@ class BestSellerController extends Controller
                 ->select(
                     "pn.id",
                     "pn.descricao",
-                    "pn.codigo_produto",
                     DB::raw("sum(loja_vendas_produtos.quantidade) as quantidade"),
+                    "pn.codigo_produto",
                     DB::raw('DATE_FORMAT(loja_vendas_produtos.created_at, "%m/%Y") as data')
                 )
                 ->where(DB::raw('DATE_FORMAT(loja_vendas_produtos.created_at, "%Y%m")'),$date)
