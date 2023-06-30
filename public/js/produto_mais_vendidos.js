@@ -1,6 +1,8 @@
 $(document).ready(function() {
     let json = '', table = '';
-    let url = window.location.protocol +"//"+ window.location.hostname + "/api-loja-new";
+    let location =  window.location.protocol +"//"+ window.location.hostname;
+    let url = window.location.protocol === "http:" ? location + "/api-loja-new" : location;
+    
     let now = new Date();
     let yearMonth = moment(now).format('YYYYMM');
 
