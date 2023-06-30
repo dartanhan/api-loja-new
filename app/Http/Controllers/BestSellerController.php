@@ -59,9 +59,7 @@ class BestSellerController extends Controller
                 ->orderBy("quantidade","desc")
                 ->get();
 
-                
                 return datatables($ret)->toJson();
-            //return  DataTables::of($ret)->make(true);
 
 
         }catch (Throwable $e){
