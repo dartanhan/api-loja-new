@@ -97,19 +97,6 @@ class BestSellerController extends Controller
                     $responseArray[$key]['tot_3_meses'] = round($medias->tot_3_meses);
                 }
 
-                //print_r( $responseArray);
-              //  exit;
-              /*  $projects = $this->vendaProdutos
-                ->select(
-                   // 'quantidade',
-                    'codigo_produto',
-                    DB::raw("sum(loja_vendas_produtos.quantidade) as qtd_tot_mes"),
-                    DB::raw("sum(loja_vendas_produtos.quantidade)/3 as qtd_media"))
-                ->whereBetween('created_at', array( "2023-04-01", "2023-07-01"))
-                ->groupBy('codigo_produto')
-                ->get();*/
-
-                  //  die($projects);
                 return datatables($responseArray)->toJson();
 
 
