@@ -12,11 +12,15 @@
                         <table class="table compact table-striped table-bordered table-hover" id="datatable" style="width:100%">
                             <thead class="text-center">
                                 <tr>
-                                    <th data-sortable="true">#</th>
-                                    <th data-sortable="true">Descrição</th>
-                                    <th data-sortable="true">Qtd</th>
-                                    <th data-sortable="true">Código</th>
-                                    <th data-sortable="false">Data</th>
+                                    <th data-sortable="true" width="100px">Código</th>
+                                    <th data-sortable="true" width="250px">Descrição</th>
+                                    <th data-sortable="true" width="80px">Qtd Atual</th>
+                                    <th data-sortable="true" width="80px">Qtd Estoque</th>
+                                    <th data-sortable="true" width="80px">Qtd Vendida Mês</th>
+                                    <th data-sortable="true" width="80px">Valor Total Mês</th>
+                                    <th data-sortable="true" width="80px">Qtd Média 3 Meses</th>
+                                    <th data-sortable="true" width="80px">Média 3 Meses</th>
+                                    <th data-sortable="true" width="80px">Falta Comprar</th>
                                 </tr>
                             </thead>
                             <tbody class="text-center"></tbody>
