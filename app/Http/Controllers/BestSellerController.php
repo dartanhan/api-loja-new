@@ -48,11 +48,6 @@ class BestSellerController extends Controller
         try {
             //descricao ,qtd vendida no mes, qtd (média 3 ultimos meses) +3%, qtd estoque (atual),falta comprar (media - estoque - menos comprado (botão) )
 
-            $dataCarbon = Carbon::parse(Carbon::now()->format("Y-m-d"));
-            $inicioDiaSemana = $dataCarbon->startOfWeek()->format('Y-m-d');
-            $fimDiaSemana = $dataCarbon->endOfWeek()->format('Y-m-d');
-
-
                 $ret =  $this->vendaProdutos
                 ->join('loja_produtos_variacao as lpv', 'loja_vendas_produtos.codigo_produto','=', 'lpv.subcodigo')
                 ->join('loja_produtos_new as pn', 'lpv.products_id','=', 'pn.id')
@@ -78,7 +73,7 @@ class BestSellerController extends Controller
                         'codigo_produto',
                         DB::raw("sum(loja_vendas_produtos.quantidade) as tot_3_meses"),
                         DB::raw("sum(loja_vendas_produtos.quantidade)/3 as qtd_media"))
-                    ->whereBetween('created_at', array( "2023-04-01", "2023-07-01"))
+                    ->whereBetween('created_at', array( Carbon::now()->subDays(90)->format("Y-m-d"), Carbon::now()->format("Y-m-d")))
                     ->where('codigo_produto' , $value->codigo_produto)
                     ->groupBy('codigo_produto')
                     ->first();
